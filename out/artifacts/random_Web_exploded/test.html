@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<!--<![endif]-->
+
+<html class="no-js  blank-false " lang="en-US">
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- LINK TAGS -->
+    <title>芃居维保, 您的空调地暖维保专家</title>
+
+    <link rel="shortcut icon" href="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/favicon.ico"/>
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/js_composer.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/default-style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/responsive.css' type='text/css' media='all' />
+
+    <style type="text/css">
+        @font-face {
+            font-family:icomoon;
+            src:url("http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/fonts/icomoon.eot");
+            src:url("http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/fonts/icomoond41d.eot?#iefix") format('embedded-opentype'),
+            url('sources/css/fonts/icomoon.woff') format('woff'),
+            url('sources/css/fonts/icomoon.ttf') format('truetype'),
+            url('sources/css/fonts/icomoon.svg') format('svg');
+            font-weight:400;
+            font-style:normal
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CMontserrat:400,700%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- angular Js css文件 -->
+    <link rel="stylesheet" type="text/css" href="sources/css/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="sources/css/bootstrap-table.css"></link>
+
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/angular.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/angular-route.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="sources/lib/main.js"></script>
+
+</head>
+    <body>
+    <header class="header desk version1 page-title-section-version1 one-page-side stuck-true stuck-boxed-false top-false sl-false search-true cart-true sidebar-toggle-true iversion-light effect-underline subeffect-ghost fixed-true fiversion-dark">
+
+        <div class="header-content">
+
+            <div class="header-body">
+                <div class="container nz-clearfix">
+
+
+                    <div class="site-sidebar-toggle"></div>
+
+                    <div class="search-toggle-wrap">
+                        <div class="search-toggle"></div>
+                        <div class="search">
+                            <form action="#" method="get">
+                                <fieldset>
+                                    <input type="text" name="s"  placeholder="Search for..." value="Search for..." />
+                                    <input type="submit"  value="Search" />
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <nav class="header-menu desk-menu nz-clearfix">
+                        <ul  class="menu">
+                            <li ng-repeat="menu in menus">
+                                <a href="{{menu.href}}">{{menu.value}}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    </body>
+</html>

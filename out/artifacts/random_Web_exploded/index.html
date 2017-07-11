@@ -1,0 +1,804 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<!--<![endif]-->
+
+<html class="no-js  blank-false " lang="en-US">
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- LINK TAGS -->
+    <title>芃居维保, 您的空调地暖维保专家</title>
+
+    <link rel="shortcut icon" href="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/favicon.ico"/>
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/js_composer.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/default-style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/responsive.css' type='text/css' media='all' />
+
+    <style type="text/css"> 
+        @font-face {
+        font-family:icomoon;
+        src:url("http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/fonts/icomoon.eot");
+        src:url("http://pengjuwb.oss-cn-shanghai.aliyuncs.com/css/fonts/icomoond41d.eot?#iefix") format('embedded-opentype'),
+        url('sources/css/fonts/icomoon.woff') format('woff'),
+        url('sources/css/fonts/icomoon.ttf') format('truetype'),
+        url('sources/css/fonts/icomoon.svg') format('svg');
+        font-weight:400;
+        font-style:normal
+    }
+    </style> 
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CMontserrat:400,700%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- angular Js css文件 -->
+    <link rel="stylesheet" type="text/css" href="sources/css/bootstrap.css"></link> 
+    <link rel="stylesheet" type="text/css" href="sources/css/bootstrap-table.css"></link>
+
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/angular.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/angular-route.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="sources/lib/main.js"></script>
+
+</head>
+
+<body ng-app="mainApp" class="home page page-id-7 page-template page-template-page-vc page-template-page-vc-php wpb-js-composer js-comp-ver-4.12 vc_responsive">
+    <!-- xuhui wrap start -->
+    <div id="gen-wrap" ng-controller='indexContrl' ng-cloak class="ng-cloak">
+
+        <!-- 侧边栏菜单 -->
+        <div class='site-widget-area widget-area'>
+            <div class="mob-sidebar-toggle2"></div>
+            <div class="custom-scroll-bar">
+                <div id="nav_menu-2" class="widget widget_nav_menu">
+                    <div class="menu-header-menu-container">
+                        <ul id="menu-header-menu" class="menu">
+                            <li ng-repeat="menu in menus">
+                                <a href={{menu.href}}>{{menu.value}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 近期项目 -->
+                <div id="recent_projects-4" class="widget widget_recent_projects">
+                    <h6 class="widget_title">近期项目</h6>
+                    <div class="recent-projects nz-clearfix">
+
+                        <div class="post nz-clearfix" ng-repeat="recentProject in recentProjects">
+                            <a href="#" title="Jurong Hub">
+                                <div class="nz-thumbnail"><img width="150" height="150" src="{{recentProject.url}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="This is caption text" /></div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="site-overlay">&nbsp;</div>
+
+        <!-- 页面主体部分 -->
+        <div id="wrap" class="nz-wide">
+
+            <header class="header mob-header cart-true nz-clearfix">
+                <div class="mob-header-top nz-clearfix">
+                    <div class="container">
+                        <div class="logo logo-mob">
+                            <a href="index.html" title="King Studio">
+                                <img id="img_8bc9_0" src="{{logoUrl}}" alt="King Studio">
+                            </a>
+                        </div>
+                        <span class="mob-menu-toggle"></span>
+                        <span class="mob-sidebar-toggle"></span>
+                    </div>
+                </div>
+                <div class="mob-header-content nz-clearfix">
+                    <div class="container">
+                        <nav class="mob-menu nz-clearfix">
+                            <ul  class="menu">
+                                <li ng-repeat="menu in menus">
+                                    <a href={{menu.href}}>{{menu.value}}</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="search nz-clearfix">
+                            <form action="#" method="get">
+                                <fieldset>
+                                    <input type="text" name="s"  placeholder="Search for..." value="Search for..." />
+                                    <input type="submit"  value="Search" />
+                                </fieldset>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <header class="header desk version1 page-title-section-version1 one-page-side stuck-true stuck-boxed-false top-false sl-false search-true cart-true sidebar-toggle-true iversion-light effect-underline subeffect-ghost fixed-true fiversion-dark">
+
+                <div class="header-content">
+
+                    <div class="header-body">
+                        <div class="container nz-clearfix">
+
+                            <div class="logo logo-desk">
+                                <a href="index.html" title="King Studio">
+                                    <img class="normal-logo" id="img_8bc9_1" src="{{logoUrl}}" alt="Peng Ju">
+                                    <img class="fixed-logo" id="img_8bc9_2" src="{{logoUrl}}" alt="Peng Ju">
+                                </a>
+                            </div>
+
+                            <div class="site-sidebar-toggle"></div>
+
+                            <div class="search-toggle-wrap">
+                                <div class="search-toggle"></div>
+                                <div class="search">
+                                    <form action="#" method="get">
+                                        <fieldset>
+                                            <input type="text" name="s"  placeholder="Search for..." value="Search for..." />
+                                            <input type="submit"  value="Search" />
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                            <nav class="header-menu desk-menu nz-clearfix">
+                                <ul  class="menu">
+                                    <li ng-repeat="menu in menus">
+                                        <a href="{{menu.href}}">{{menu.value}}</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <div class="page-content-wrap">
+                <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#333333;padding:0px;margin-top:0px;margin-bottom:0px;background-image:url(http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/slider_pattern-1.png);background-repeat:repeat;background-size:normal;background-position:left top;">
+                    <!-- START REVOLUTION SLIDER 5.2.5.3 auto mode -->
+                    <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.2.5.3">
+                        <ul>
+                            <!-- SLIDE  -->
+                            <li data-index="rs-1" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1400" data-thumb="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/thumb_1.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off" data-title="Slide 1" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/define1_1.jpg" alt="" title="slider_bg1" width="1600" height="800" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <p class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-1-layer-1" data-x="" data-y="227" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1300" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; font-size: 26px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-shadow:1px 1px rgba(0,0,0,0.5);">让我们荡起双桨, 迎接美好的明天</p>
+
+                                <!-- LAYER NR. 2 -->
+                                <h1 class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-1-layer-2" data-x="" data-y="285" data-width="['587']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="x:50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1600" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 587px; max-width: 587px; white-space: normal; font-size: 62px; line-height: 72px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Montserrat;text-shadow:1px 1px rgba(0,0,0,0.5);">我们是专业的空调维修团队 </h1>
+
+                                <!-- LAYER NR. 3 -->
+                                <h1 class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-1-layer-3" data-x="" data-y="444" data-width="['644']" data-height="['104']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1900" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; min-width: 644px; max-width: 644px; max-width: 104px; max-width: 104px; white-space: normal; font-size: 20px; line-height: 34px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;font-style:italic;">欢迎来到XXX, 在这里我们会提供最专业的空调维修服务, 为您和您的家人带来  </h1>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption rev-btn tp-layer-selectable  tp-resizeme" id="slide-1-layer-4" data-x="1" data-y="541" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:200;e:Linear.easeNone;" data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(51, 51, 51, 1.00);bc:rgba(51, 51, 51, 1.00);" data-transform_in="y:50px;opacity:0;s:600;e:easeOutBack;" data-transform_out="opacity:0;s:300;" data-start="2200" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap; font-size: 13px; line-height: 24px; font-weight: 400; color: rgba(51, 51, 51, 1.00);font-family:Montserrat;background-color:rgba(255, 255, 255, 1.00);padding:10px 24px 10px 24px;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:2px;border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">让我们开始吧 </div>
+
+                                <!-- LAYER NR. 5 -->
+                                <div class="tp-caption rev-btn tp-layer-selectable  tp-resizeme" id="slide-1-layer-7" data-x="177" data-y="541" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:200;e:Linear.easeNone;" data-style_hover="c:rgba(51, 51, 51, 1.00);bg:rgba(255, 255, 255, 1.00);" data-transform_in="y:50px;opacity:0;s:600;e:easeOutBack;" data-transform_out="opacity:0;s:300;" data-start="2600" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 9; white-space: nowrap; font-size: 13px; line-height: 24px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Montserrat;padding:10px 24px 10px 24px;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:2px;border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">发现更多内容 </div>
+                            </li>
+                            <!-- SLIDE  -->
+                            <li data-index="rs-4" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1400" data-thumb="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/thumb_2.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide 2" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/define1_4.jpg" alt="" title="slider_bg2" width="1600" height="800" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <p class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-4-layer-1" data-x="600" data-y="237" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1300" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; font-size: 26px; line-height: 36px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-shadow:1px 1px rgba(0,0,0,0.5);">&nbsp; </p>
+
+                                <!-- LAYER NR. 2 -->
+                                <h1 class="tp-caption smaller-text tp-layer-selectable  tp-resizeme" id="slide-4-layer-2" data-x="600" data-y="285" data-width="['587']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="x:50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1600" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 587px; max-width: 587px; white-space: normal; font-size: 62px; line-height: 72px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Montserrat;text-shadow:1px 1px rgba(0,0,0,0.5);">我们是芃居维护团队 </h1>
+
+                                <!-- LAYER NR. 3 -->
+                                <h1 class="tp-caption smaller-text2 tp-layer-selectable  tp-resizeme" id="slide-4-layer-3" data-x="600" data-y="444" data-width="['644']" data-height="['104']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1900" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; min-width: 644px; max-width: 644px; max-width: 104px; max-width: 104px; white-space: normal; font-size: 20px; line-height: 34px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;font-style:italic;">在这里我们提供最专业的空调安装及护养服务, 为您省去XXXXXXX的烦恼  </h1>
+
+                                <!-- LAYER NR. 4 -->
+                                <!--
+                                <div class="tp-caption rev-btn tp-layer-selectable  tp-resizeme" id="slide-4-layer-4" data-x="600" data-y="541" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:200;e:Linear.easeNone;" data-style_hover="c:rgba(255, 255, 255, 1.00);bg:rgba(51, 51, 51, 1.00);bc:rgba(51, 51, 51, 1.00);" data-transform_in="y:50px;opacity:0;s:600;e:easeOutBack;" data-transform_out="opacity:0;s:300;" data-start="2200" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap; font-size: 13px; line-height: 24px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Montserrat;background-color:rgba(255, 150, 0, 1.00);padding:10px 24px 10px 24px;border-color:rgba(255, 150, 0, 1.00);border-style:solid;border-width:2px;border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">GET IT STARTED </div>
+                                -->
+
+                                <!-- LAYER NR. 5 -->
+                                <!--
+                                <div class="tp-caption rev-btn tp-layer-selectable  tp-resizeme" id="slide-4-layer-7" data-x="778" data-y="541" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:200;e:Linear.easeNone;" data-style_hover="c:rgba(51, 51, 51, 1.00);bg:rgba(255, 255, 255, 1.00);" data-transform_in="y:50px;opacity:0;s:600;e:easeOutBack;" data-transform_out="opacity:0;s:300;" data-start="2600" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 9; white-space: nowrap; font-size: 13px; line-height: 24px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Montserrat;padding:10px 24px 10px 24px;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:2px;border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">DICOVER MORE </div>
+                                -->
+                            </li>
+                            <!-- SLIDE  -->
+                            <li data-index="rs-5" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1400" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide 3" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                <!-- MAIN IMAGE -->
+                                <img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/define1_2.jpg" alt="" title="slider_bg3" width="1600" height="800" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <p class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-5-layer-1" data-x="center" data-hoffset="" data-y="457" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1300" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; font-size: 26px; line-height: 36px; font-weight: 400; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;text-shadow:1px 1px rgba(0,0,0,0.5);">让我们现在开始吧 </p>
+
+                                <!-- LAYER NR. 2 -->
+                                <h1 class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-5-layer-2" data-x="center" data-hoffset="" data-y="515" data-width="['922']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="x:50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1600" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 922px; max-width: 922px; white-space: normal; font-size: 62px; line-height: 72px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Montserrat;text-align:center;text-shadow:1px 1px rgba(0,0,0,0.5);">维护您和您家人的健康 </h1>
+
+                                <!-- LAYER NR. 3 -->
+                                <h1 class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-5-layer-3" data-x="center" data-hoffset="" data-y="604" data-width="['644']" data-height="['104']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1900" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; min-width: 644px; max-width: 644px; max-width: 104px; max-width: 104px; white-space: normal; font-size: 20px; line-height: 34px; font-weight: 400; color: rgba(25, 25, 25, 1.00);font-family:Open Sans;text-align:center;font-style:italic;">在这里, 我们提供最专业的维修团队, 提供最优质的维修服务  </h1>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-5-layer-8" data-x="center" data-hoffset="" data-y="130" data-width="['none','none','none','none']" data-height="['none','none','none','none']" data-transform_idle="o:1;" data-transform_in="x:50px;opacity:0;s:600;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-start="2200" data-responsive_offset="on" style="z-index: 8;"><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/house1.png" alt="" width="645" height="320" data-ww="1034px" data-hh="320px" data-no-retina> </div>
+                            </li>
+                        </ul>
+
+                        <div class="tp-bannertimer" style="height: 5px; background-color: rgba(255, 255, 255, 0.15);"></div>
+                    </div>
+
+                </div>
+                <!-- END REVOLUTION SLIDER -->
+
+                <!-- content start -->
+                <div id="nz-content" class='content nz-clearfix padding-false'>
+                    <div class='container page-full-width'>
+                        <!-- post start -->
+                        <div id="post-7" class="post-7 page type-page status-publish hentry">
+                            <section class="page-content nz-clearfix">
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-img-width="1600" data-img-height="311" data-animation-speed="35000" data-parallax="false" id="div_eec1_0">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 col12  element-animate-false valign-top" data-effect="none" data-align="left">
+                                                <div class="col-inner">
+                                                    <h2 id="h2_ac88_0" class="vc_custom_heading">{{ourUsers.descriptor1}}</h2>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_ac88_0">&nbsp;</div>
+                                                    </div>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_ac88_1">&nbsp;</div>
+                                                    </div>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_ac88_2">&nbsp;</div>
+                                                    </div>
+                                                    <div id="div_ac88_3" class="nz-column-text nz-clearfix no-padding element-animate-false" data-effect="none" data-effect-speed="250">
+                                                        <p id="p_ac88_0"><span id="span_ac88_0">{{ourUsers.descriptor}}</span></p>
+                                                        <p>
+                                                    </div>
+                                                    <div class='gap nz-clearfix' style='height:50px'>&nbsp;</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-true " data-animation-speed="35000" data-parallax="false" id="div_6f34_0">
+                                    <div class="nz-row">
+                                        <div class="col vc_col-sm-12 col12  element-animate-false valign-top" data-effect="none" data-align="left" data-margin="false">
+                                            <div class="col-inner">
+                                                <div id="nz-recent-projects-1" class="element-animate small-image-nogap animate-none nz-clearfix nz-recent-projects">
+                                                    <div class="nz-projects-filter ninzio-filter">
+                                                        <div class="container" id="id_buttons">
+                                                            <span class="active filter" data-group="all" data-count="12">显示全部</span><span class="filter-toggle"></span>
+                                                            <div class="filter-container">
+                                                                <span class="filter" data-group="songjiang" data-count="4">松江</span>
+                                                                <span class="filter" data-group="minhang" data-count="8">闵行</span>
+                                                                <span class="filter" data-group="xuhui" data-count="7">徐汇</span>
+                                                                <span class="filter" data-group="qingpu" data-count="6">青浦</span>
+                                                                <span class="filter" data-group="baoshan" data-count="4">宝山</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="id_ourUsers" class="recent-projects-wrap nz-clearfix">
+                                                        <div ng-repeat="user in ourUsers.users" class="projects mix nz-clearfix" data-groups='{{user.group}}' data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail">
+                                                                <img width="585" height="480" src="{{user.imageUrl}}" class="wp-post-image" alt="This is caption text" />
+                                                                <a class="ninzio-overlay" href="#"></a>
+                                                                <h4 class="project-title"><a href="#">{{user.name}}</a></h4></div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_79b9_0">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-top" data-effect="none" data-align="left">
+                                                <div class="col-inner">
+                                                    <div class='gap nz-clearfix' id="div_79b9_1">&nbsp;</div>
+                                                    <h2 id="h2_79b9_0" class="vc_custom_heading">{{ourServices.descriptor}}</h2>
+                                                    <div class='gap nz-clearfix' id="div_79b9_2">&nbsp;</div>
+                                                    <div class="nz-column-text nz-clearfix  element-animate-false" data-effect="none" data-effect-speed="50"><span id="span_79b9_0"></span></div>
+                                                    <div class='gap nz-clearfix' id="div_79b9_3">&nbsp;</div>
+                                                    <div class="nz-content-box nz-clearfix align-left version1 animate-none" data-columns="1" data-animate="false">
+                                                        <div ng-repeat="service in ourServices.services" id="{{service.id}}" class="  bord_active nz-box element-animate">
+                                                            <div class="nz-box-wrap">
+                                                                <div class="box-icon-wrap">
+                                                                    <div class="{{service.icon}}"></div>
+                                                                </div>
+                                                                <div class="box-data">
+                                                                    <h3><span id="span_79b9_1">{{service.title}}</span></h3>
+                                                                    <p><span id="span_79b9_2">{{service.descriptor}}</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-12 vc_col-xs-12 col12  element-animate-false valign-top" data-effect="none" data-align="left">
+                                                <div class="col-inner"><img class="aligncenter size-full wp-image-4472 " src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/pengju-copy.jpg" alt="4472" width="570" height="763"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <h2 id="h2_14f5_1" class="vc_custom_heading">{{ourTeamDatas.descriptor}}</h2>
+                                            <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                <div class="nz-separator solid" id="div_14f5_6">&nbsp;</div>
+                                            </div>
+                                            <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                <div class="nz-separator solid" id="div_14f5_7">&nbsp;</div>
+                                            </div>
+                                            <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                <div class="nz-separator solid" id="div_14f5_8">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-img-width="1600" data-img-height="299" data-animation-speed="35000" data-parallax="false" id="div_14f5_0">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 col12  element-animate-false valign-top" data-effect="none" data-align="left">
+                                                <div class="col-inner">
+                                                    <!-- angular化 -->
+                                                    <div id="nz-counter-1" class="nz-counter nz-clearfix" data-columns="4">
+
+                                                        <div ng-repeat="data in ourTeamDatas.datas" class="nz-count" id="nz-count-2">
+                                                            <div class="nz-count-wrap nz-clearfix"><span class="count-value" id="{{data.icon_id}}">{{data.count}}</span><span class="count-icon {{data.icon}}" id="{{data.font_id}}"></span><span class="count-border" id="span_14f5_2"></span><span class="count-title" id="span_14f5_3">{{data.title}}</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false">
+                                    <div class="container">
+                                        <div class="nz-row">&nbsp;</div>
+                                        <div class="nz-row">&nbsp;</div>
+                                        <div class="nz-row">&nbsp;</div>
+                                        <div class="nz-row">&nbsp;</div>
+                                    </div>
+                                </div>
+                                <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false">
+                                    <div class="container">
+                                        <div class="nz-row">
+                                            <div class="col vc_col-sm-12 col12  element-animate-false valign-top" data-effect="none" data-align="left">
+                                                <div class="col-inner">
+                                                    <h2 id="h2_14f5_1" class="vc_custom_heading">我们的案例</h2>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_14f5_6">&nbsp;</div>
+                                                    </div>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_14f5_7">&nbsp;</div>
+                                                    </div>
+                                                    <div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+                                                        <div class="nz-separator solid" id="div_14f5_8">&nbsp;</div>
+                                                    </div>
+                                                    <div id="div_14f5_9" class="nz-column-text nz-clearfix no-padding element-animate-false" data-effect="none" data-effect-speed="50">
+                                                        <p id="p_14f5_0"><span id="span_14f5_16">迄今为止, 芃居维保团队服务过的客户超过了100家, 维修过的中央空调及地暖超过500台, 获得了100%的客户满意度.</span></p>
+                                                        <p>
+                                                    </div>
+                                                    <div class='gap nz-clearfix' id="div_14f5_10">&nbsp;</div>
+                                                    <div id="nz-recent-posts-1" data-autoplay="false" data-columns="3" class="lazy nz-recent-posts nz-carousel nz-clearfix animate-false" data-animate="true">
+                                                        <div class="post item format- nz-clearfix" data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail"><img width="585" height="480" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/blog1-585x480.jpg" class="wp-post-image" alt="blog1" />
+                                                                <div class="ninzio-overlay">
+                                                                    <a class="nz-overlay-before" title="View details" href="#"></a>
+                                                                </div>
+                                                                <div class="post-date-full">2016年8月</div>
+                                                            </div><span class="sticky-ind"></span>
+                                                            <div class="post-body">
+                                                                <div class="post-body-in">
+                                                                    <h3 class="post-title"><a href="#" title="Read more about Welcome to Responsive Retina-Ready WP Theme" rel="bookmark">上海公馆小区</a></h3>
+                                                                    <div class="postmeta">
+                                                                        <div class="post-category"><a href="#" rel="category tag">中央空调保养</a></div>
+                                                                    </div>
+                                                                    <div class="post-excerpt">该客户家中中央空调很多年未清洗，吹风口及过滤网灰尘很多影响使用[...]</div><a class="post-more" href="#">案例详情<span class="screen-reader-text">Welcome to Responsive Retina-Ready WP Theme</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post item format-aside nz-clearfix" data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail"><img width="585" height="480" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/blog2-585x480.jpg" class="wp-post-image" alt="blog2" />
+                                                                <div class="ninzio-overlay">
+                                                                    <a class="nz-overlay-before" title="View details" href="#"></a>
+                                                                </div>
+                                                                <div class="post-date-full">2016年11月</div>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <div class="post-body-in">
+                                                                    <h3 class="post-title"><a href="#" title="Read more about HTML Responsive Transportashion" rel="bookmark">颐亭花园小区</a></h3>
+                                                                    <div class="postmeta">
+                                                                        <div class="post-category"><a href="#" rel="category tag">地暖保养</a></div>
+                                                                    </div>
+                                                                    <div class="post-excerpt">该客户家中地暖中央锅炉系统线路出现问题，导致锅炉温控有问题，进而影响地暖效果[...]</div><a class="post-more" href="#">案例详情<span class="screen-reader-text">HTML Responsive Transportashion</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post item format-audio nz-clearfix" data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail"><img width="585" height="480" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/blog3-585x480.jpg" class="wp-post-image" alt="blog3" />
+                                                                <div class="ninzio-overlay">
+                                                                    <a class="nz-overlay-before" title="View details" href="#"></a>
+                                                                </div>
+                                                                <div class="post-date-full">2017年3月</div>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <div class="post-body-in">
+                                                                    <h3 class="post-title"><a href="#" title="Read more about Just another post with A Creative Design And Code" rel="bookmark">万科花园一期小区</a></h3>
+                                                                    <div class="postmeta">
+                                                                        <div class="post-category"><a href="#" rel="category tag">中央空调保养</a></div>
+                                                                    </div>
+                                                                    <div class="post-excerpt">中央空调风扇需要清洗[...]</div><a class="post-more" href="#">更多内容<span class="screen-reader-text">Just another post with A Creative Design And Code</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post item format-video nz-clearfix" data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail"><img width="585" height="480" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/blog4-585x480.jpg" class="wp-post-image" alt="blog4" />
+                                                                <div class="ninzio-overlay">
+                                                                    <a class="nz-overlay-before" title="View details" href="#"></a>
+                                                                </div>
+                                                                <div class="post-date-full">2015年3月</div>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <div class="post-body-in">
+                                                                    <h3 class="post-title"><a href="#" title="Read more about Fundamentals of Theme Development and Design" rel="bookmark">万科花园1期</a></h3>
+                                                                    <div class="postmeta">
+                                                                        <div class="post-category"><a href="#" rel="category tag">中央空调保养</a></div>
+                                                                    </div>
+                                                                    <div class="post-excerpt">该客户家中中央空调很多年未清洗，吹风口及过滤网灰尘很多影响使用[...]</div><a class="post-more" href="#">案例详情<span class="screen-reader-text">Fundamentals of Theme Development and Design</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post item format-quote nz-clearfix" data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail"><img width="585" height="480" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/blog5-585x480.jpg" class="wp-post-image" alt="blog5" />
+                                                                <div class="ninzio-overlay">
+                                                                    <a class="nz-overlay-before" title="View details" href="#"></a>
+                                                                </div>
+                                                                <div class="post-date-full">2015年3月</div>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <div class="post-body-in">
+                                                                    <h3 class="post-title"><a href="#" title="Read more about Create Unique and Powerful Designs with Ninzio" rel="bookmark">颐亭花园小区</a></h3>
+                                                                    <div class="postmeta">
+                                                                        <div class="post-category"><a href="#" rel="category tag">中央空调保养</a></div>
+                                                                    </div>
+                                                                    <div class="post-excerpt">该客户家中中央空调很多年未清洗，吹风口及过滤网灰尘很多影响使用[...]</div><a class="post-more" href="#">案例详情<span class="screen-reader-text">Create Unique and Powerful Designs with Ninzio</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post item format-gallery nz-clearfix" data-grid="ninzio_01">
+                                                            <div class="nz-thumbnail"><img width="585" height="480" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/blog6-585x480.jpg" class="wp-post-image" alt="blog6" />
+                                                                <div class="ninzio-overlay">
+                                                                    <a class="nz-overlay-before" title="View details" href="#"></a>
+                                                                </div>
+                                                                <div class="post-date-full">2015年3月</div>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <div class="post-body-in">
+                                                                    <h3 class="post-title"><a href="#" title="Read more about Welcome to Ninzio Painting and baoshan" rel="bookmark">万科别墅小区</a></h3>
+                                                                    <div class="postmeta">
+                                                                        <div class="post-category"><a href="#" rel="category tag">地暖保养</a></div>
+                                                                    </div>
+                                                                    <div class="post-excerpt">该客户家中地暖长时间不制热，经过技术人员排查之后发现地暖热水管堵塞 [...]</div><a class="post-more" href="#">案例详情<span class="screen-reader-text">Welcome to Ninzio Painting and baoshan</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+                        <!-- post end -->
+                    </div>
+
+                </div>
+                <!-- content end -->
+
+                <!-- footer start -->
+                <footer class='footer'>
+                    <div class="footer-widget-area nz-clearfix">
+                        <div class="container">
+                            <aside class="footer-widget-area widget-area nz-clearfix">
+                                <div id="text-2" class="widget widget_text">
+                                    <div class="textwidget"><img id="img_b749_0" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/sdefine/logo1.png" alt="King Studio">
+                                        <div class="gap nz-clearfix" id="div_b749_0">&nbsp;</div>
+                                        我们打造最专业的中央空调保养及地暖维修业务.
+                                        <div class="gap nz-clearfix" id="div_b749_1">&nbsp;</div>
+                                        我们团队的目标是为您的生活增添亮点，为您提供最优质的服务，您的健康生活是我们最大动力.</div>
+                                </div>
+                                <div id="nz-recent-posts-3" class="widget widget_nz_recent_entries">
+                                    <h6 class="widget_title">近期案例</h6>
+                                    <ul>
+
+                                        <li class="post">
+                                            <div class="post-date-custom"><span>08</span><span>9月</span></div>
+                                            <div class="post-body">
+                                                <a class="post-title" href="#">沪南小区, 中央空调制冷效果差</a>
+                                                <div class="widget-post-category"><a href="#" rel="category tag">中央空调保养</a></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="post">
+                                            <div class="post-date-custom"><span>03</span><span>9月</span></div>
+                                            <div class="post-body">
+                                                <a class="post-title" href="#">淞沪小区, 电暖锅炉有异常响声</a>
+                                                <div class="widget-post-category"><a href="#" rel="category tag">地暖保养</a></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="post">
+                                            <div class="post-date-custom"><span>12</span><span>12月</span></div>
+                                            <div class="post-body">
+                                                <a class="post-title" href="#">万科花园小区, 电暖锅炉有异常响声</a>
+                                                <div class="widget-post-category"><a href="#" rel="category tag">地暖保养</a></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="null-instagram-feed-2" class="widget null-instagram-feed">
+                                    <h6 class="widget_title">案例图片</h6>
+                                    <ul class="instagram-pics instagram-size-thumbnail">
+                                        <li class="">
+                                            <a href="#" target="_blank" class=""><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/14714376_1781526728762593_8566839723920719872_nacb3.jpg?" alt="Photography" class="" /></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" class=""><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/14727706_371931419823713_27868874552639488_nf14a.jpg?" alt="Photography" class="" /></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" class=""><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/14676802_612739135577506_4389787207389413376_n5832.jpg?" alt="Such an amazing"  class="" /></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" class=""><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/14583290_259781504423824_5238610338651308032_nc95a.jpg?" alt="Having an amazing" class="" /></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" class=""><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/14540615_707482749409648_6248285179173928960_n.jpg" alt="Corrugated is definitely something" class="" /></a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" target="_blank" class=""><img src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/upload/14727683_1858576514378156_1991442521154125824_nd49e.jpg?" alt="Photography"  class="" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="fast_contact_widget-2" class="widget widget_fast_contact_widget">
+                                    <h6 class="widget_title">留言</h6>
+                                    <div class="kingstudio-contact-form">
+                                        <form id="contact-form" action="#">
+
+                                            <div>
+                                                <input ng-model="message.userName" name="name" id="name" type="text"  class="kingstudio-contact-form-name" placeholder="您的姓名"  />
+                                            </div>
+
+                                            <div>
+                                                <input ng-model="message.phone"  name="phone" id="phone" type="text" class="kingstudio-contact-form-phone" placeholder="您的手机"  />
+                                            </div>
+                                            <div>
+                                                <input ng-model="message.address"  name="mail" id="address" type="text" class="kingstudio-contact-form-phone" placeholder="您的地址"  />
+                                            </div>
+                                            <div>
+                                                <input ng-model="message.email"  name="mail" id="mail" type="text" class="kingstudio-contact-form-email" placeholder="您的邮箱"  />
+                                            </div>
+
+                                            <div>
+                                               <textarea ng-model="message.content"  name="comment" id="comment"  class="kingstudio-contact-form-mgs" placeholder="您的留言" ></textarea>
+                                            </div>
+
+                                            <div ng-click="doSubmit();" class="kingstudio-contact-form-submit-div">
+                                                <input ng-disable="btnSubmit" type="submit" value="发送" class="button button-normal default full-false small square icon-true animate-false anim-type-ghost hover-fill kingstudio-contact-form-submit" id="submit_contact">
+                                                <div id="msg" class="message"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="footer-info-area nz-clearfix">
+                        <div class="container">
+                            <div class="footer-copyright nz-clearfix">
+                                CopyRight&copy;2017.上海芃居机电有限公司版权所有.
+                                 &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#"><img src="./sources/sdefine/beian.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer end -->
+            </div>
+        </div>
+        <!-- wrap end -->
+    </div>
+    <a id="top" href="#wrap"></a>
+    <!-- xuhui wrap end -->
+
+
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/jquery/jquery-migrate.min.js?'></script>
+    <!--<script type='text/javascript' src='http://ditu.google.cn/maps/api/js?key=AIzaSyDslqBC-ZEVJMnuN28gf6lkBrfS_MWMJJg&amp;ver=4.6.1'></script>-->
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/modernizr.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/jquery-blockui/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/frontend/woocommerce.min.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/jquery.shuffle.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/controller.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/contact-form.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/jquery.themepunch.revolution.min.js'></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="http://pengjuwb.oss-cn-shanghai.aliyuncs.com/js/extensions/revolution.extension.video.min.js"></script>
+    
+
+    <script type="text/javascript">
+        /******************************************
+			-	PREPARE PLACEHOLDER FOR SLIDER	-
+		******************************************/
+
+        var setREVStartSize = function() {
+            try {
+                var e = new Object,
+                    i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                e.c = jQuery('#rev_slider_1_1');
+                e.gridwidth = [1170];
+                e.gridheight = [800];
+
+                e.sliderLayout = "auto";
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function(e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({
+                    height: f
+                })
+
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        };
+
+        setREVStartSize();
+
+        var tpj = jQuery;
+
+        var revapi1;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 5000,
+                    navigation: {
+                        keyboardNavigation: "on",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "on",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "hades",
+                            // enable: true,
+                            hide_onmobile: true,
+                            hide_under: 768,
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div></div>',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 0,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 0,
+                                v_offset: 0
+                            }
+                        },
+                        bullets: {
+                            enable: true,
+                            hide_onmobile: true,
+                            hide_under: 640,
+                            style: "hermes",
+                            hide_onleave: true,
+                            hide_delay: 200,
+                            hide_delay_mobile: 1200,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 0,
+                            v_offset: 30,
+                            space: 12,
+                            tmp: ''
+                        }
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1170,
+                    gridheight: 800,
+                    lazyType: "none",
+                    parallax: {
+                        type: "mouse",
+                        origo: "enterpoint",
+                        speed: 400,
+                        levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 55],
+                        type: "mouse",
+                        disable_onmobile: "on"
+                    },
+                    shadow: 0,
+                    spinner: "spinner5",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        }); /*ready*/
+    </script>
+    <script>
+        var htmlDivCss = unescape(".hades.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3Argba%280%2C0%2C0%2C0.25%29%3B%0A%09width%3A100px%3B%0A%09height%3A100px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A100%3B%0A%7D%0A%0A.hades.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%22revicons%22%3B%0A%09font-size%3A30px%3B%0A%09color%3Argba%28255%2C%20255%2C%20255%2C%201%29%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%20100px%3B%0A%09text-align%3A%20center%3B%0A%20%20transition%3A%20background%200.3s%2C%20color%200.3s%3B%0A%7D%0A.hades.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%22%5Ce824%22%3B%0A%7D%0A.hades.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%22%5Ce825%22%3B%0A%7D%0A%0A.hades.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20color%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%20%20%20background%3Argba%28255%2C%20255%2C%20255%2C%201%29%3B%0A%20%7D%0A.hades%20.tp-arr-allwrapper%20%7B%0A%20%20position%3Aabsolute%3B%0A%20%20left%3A100%25%3B%0A%20%20top%3A0px%3B%0A%20%20background%3A%23888%3B%20%0A%20%20width%3A100px%3Bheight%3A100px%3B%0A%20%20-webkit-transition%3A%20all%200.3s%3B%0A%20%20transition%3A%20all%200.3s%3B%0A%20%20-ms-filter%3A%20%22progid%3Adximagetransform.microsoft.alpha%28opacity%3D0%29%22%3B%0A%20%20filter%3A%20alpha%28opacity%3D0%29%3B%0A%20%20-moz-opacity%3A%200.0%3B%0A%20%20-khtml-opacity%3A%200.0%3B%0A%20%20opacity%3A%200.0%3B%0A%20%20-webkit-transform%3A%20rotatey%28-90deg%29%3B%0A%20%20transform%3A%20rotatey%28-90deg%29%3B%0A%20%20-webkit-transform-origin%3A%200%25%2050%25%3B%0A%20%20transform-origin%3A%200%25%2050%25%3B%0A%7D%0A.hades.tp-rightarrow%20.tp-arr-allwrapper%20%7B%0A%20%20%20left%3Aauto%3B%0A%20%20%20right%3A100%25%3B%0A%20%20%20-webkit-transform-origin%3A%20100%25%2050%25%3B%0A%20%20transform-origin%3A%20100%25%2050%25%3B%0A%20%20%20-webkit-transform%3A%20rotatey%2890deg%29%3B%0A%20%20transform%3A%20rotatey%2890deg%29%3B%0A%7D%0A%0A.hades%3Ahover%20.tp-arr-allwrapper%20%7B%0A%20%20%20-ms-filter%3A%20%22progid%3Adximagetransform.microsoft.alpha%28opacity%3D100%29%22%3B%0A%20%20filter%3A%20alpha%28opacity%3D100%29%3B%0A%20%20-moz-opacity%3A%201%3B%0A%20%20-khtml-opacity%3A%201%3B%0A%20%20opacity%3A%201%3B%20%20%0A%20%20%20%20-webkit-transform%3A%20rotatey%280deg%29%3B%0A%20%20transform%3A%20rotatey%280deg%29%3B%0A%0A%20%7D%0A%20%20%20%20%0A.hades%20.tp-arr-iwrapper%20%7B%0A%7D%0A.hades%20.tp-arr-imgholder%20%7B%0A%20%20background-size%3Acover%3B%0A%20%20position%3Aabsolute%3B%0A%20%20top%3A0px%3Bleft%3A0px%3B%0A%20%20width%3A100%25%3Bheight%3A100%25%3B%0A%7D%0A.hades%20.tp-arr-titleholder%20%7B%0A%7D%0A.hades%20.tp-arr-subtitleholder%20%7B%0A%7D%0A%0A.hermes.tp-bullets%20%7B%0A%7D%0A%0A.hermes%20.tp-bullet%20%7B%0A%20%20%20%20overflow%3Ahidden%3B%0A%20%20%20%20border-radius%3A50%25%3B%0A%20%20%20%20width%3A12px%3B%0A%20%20%20%20height%3A12px%3B%0A%20%20%20%20background-color%3A%20rgba%280%2C%200%2C%200%2C%200%29%3B%0A%20%20%20%20box-shadow%3A%20inset%200%200%200%202px%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20%20%20-webkit-transition%3A%20background%200.3s%20ease%3B%0A%20%20%20%20transition%3A%20background%200.3s%20ease%3B%0A%20%20%20%20position%3Aabsolute%3B%0A%7D%0A%0A.hermes%20.tp-bullet%3Ahover%20%7B%0A%09%20%20background-color%3A%20rgba%28140%2C%20196%2C%2067%2C%201%29%3B%0A%7D%0A.hermes%20.tp-bullet%3Aafter%20%7B%0A%20%20content%3A%20%27%20%27%3B%0A%20%20position%3A%20absolute%3B%0A%20%20bottom%3A%200%3B%0A%20%20height%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20box-shadow%3A%200%200%201px%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20-webkit-transition%3A%20height%200.3s%20ease%3B%0A%20%20transition%3A%20height%200.3s%20ease%3B%0A%7D%0A.hermes%20.tp-bullet.selected%3Aafter%20%7B%0A%20%20height%3A100%25%3B%0A%7D%0A%0A");
+        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+        if (htmlDiv) {
+            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+        } else {
+            var htmlDiv = document.createElement('div');
+            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+        }
+    </script>
+
+</body>
+</html>
+
